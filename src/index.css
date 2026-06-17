@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@300;400;500&display=swap');
+
+@font-face {
+  font-family: 'Argine';
+  src: url('/fonts/Argine.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .stamp-frame {
+    -webkit-mask-image:
+      radial-gradient(circle at 10px 0, transparent 7.5px, black 8px),
+      radial-gradient(circle at 10px 100%, transparent 7.5px, black 8px),
+      radial-gradient(circle at 0 10px, transparent 7.5px, black 8px),
+      radial-gradient(circle at 100% 10px, transparent 7.5px, black 8px);
+    -webkit-mask-size: 20px 100%, 20px 100%, 100% 20px, 100% 20px;
+    -webkit-mask-position: 0 0, 0 0, 0 0, 0 0;
+    -webkit-mask-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    -webkit-mask-composite: source-in;
+    mask-image:
+      radial-gradient(circle at 10px 0, transparent 7.5px, black 8px),
+      radial-gradient(circle at 10px 100%, transparent 7.5px, black 8px),
+      radial-gradient(circle at 0 10px, transparent 7.5px, black 8px),
+      radial-gradient(circle at 100% 10px, transparent 7.5px, black 8px);
+    mask-size: 20px 100%, 20px 100%, 100% 20px, 100% 20px;
+    mask-position: 0 0, 0 0, 0 0, 0 0;
+    mask-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    mask-composite: intersect;
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp -r portfolio/* portfolio/.* .)",
+      "Bash(rm -rf __MACOSX portfolio)"
+    ]
+  }
+}
